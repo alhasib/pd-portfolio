@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/experience.css' %}">
+    <div class="experience">
+        <div class="row">
+            <div class="col-md-6">
+                 {% for i in experience %}
+                 {{ i.designation }} ( {{ i.from_date }} - {{ i.to_date }} ) </br>
+                 {{ i.company_name }}</br>
+                 {{ i.description }}
+                 {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/about_me.css' %}">
+    <div class="about-me">
+        <div class="row">
+            <div class="col-md-6 about">
+                {% for i in about %}
+                    {{ i.about_me }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

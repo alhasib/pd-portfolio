@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <!-- <link rel="stylesheet" href="{% static '' %}css/style.css"> -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="left-area">
+
+                <h3>My <span>Ressume</span></h3>
+
+            </div>
+            <div class="right-area">
+                <a href="#">Logout</a>
+            </div>
+        </header>
+
+        <div class="sidebar">
+
+            <!-- <center> -->
+                <!-- <img src="static/images/myphoto.png" alt=""> -->
+                <!-- {% for i in profile %} -->
+                <!-- <h4>{{ i.name }}</h4> -->
+                <!-- {% endfor %} -->
+            <!-- </center> -->
+            <a href="{% url 'about-me' %}">About</a>
+            <a href="{% url 'experience' %}">Experience</a>
+            <a href="{% url 'education' %}">Education</a>
+            <a href="{% url 'skill' %}">Skills</a>
+            <a href="{% url 'interest' %}">Interests</a>
+            <a href="#">Awards</a>
+
+
+        </div>
+
+       
+        {% block content %}
+        {% endblock %}
+       
+    </body>
+</html>

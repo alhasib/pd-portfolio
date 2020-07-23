@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/interest.css'%}">
+<div class="container interest">
+    <div class="row">
+        <div class="col-md-6">
+            {% for i in interest %}
+                {{ i.title }} </br>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

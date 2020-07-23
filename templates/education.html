@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/education.css' %}">
+    <div class="education">
+        <div class="row">
+            <div class="col-md-6">
+                {% for i in education %}
+                {{ i.institution_name }} ( {{ i.from_date  }}- {{ i.to_date }})</br>
+                {{ i.name_of_degree }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

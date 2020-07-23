@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/skill.css' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 skill">
+                {% for i in skill %}
+                    <button type="button" class="btn btn-info mt-3 rounded">{{ i.title }}</button></br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
