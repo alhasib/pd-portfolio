@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block profile %}
+  <img src="{{profile.image.url}}">
+    <h4>{{ profile.user.username }}</h4>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/award.css' %}">
+    <div class="row">
+        <div class="col-md-6 award">
+            {% for i in award %}
+               
+                <button class="btn btn-info mt-3">{{ i.title }}</button> </br>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -2,20 +2,24 @@
 {% load static %}
 <html>
     <head>
-        <title>My Portfolio</title>
+        <title>My Portfolio Admin </title>
         <!-- <link rel="stylesheet" href="{% static '' %}css/style.css"> -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
         <header>
             <div class="left-area">
 
-                <h3>My <span>Ressume</span></h3>
+                {% if user.is_authenticated %}
+                    <h3>Welcome, {{ user.username }}  </h3>
+              
+                {% endif %}
+              
 
             </div>
             <div class="right-area">
-                <a href="#">Logout</a>
+                <a href="{% url 'logout' %}">Logout</a>
             </div>
         </header>
        
@@ -25,8 +29,8 @@
                 {% block profile %}
                 {% endblock %}
             </center>
-            <a href="aboutme">About Me</a>
-            <a href="experience">Experience</a>
+            <a href="{% url 'c_about_me' %}">About Me</a>
+            <a href="{% url 'c_experience' %}">Experience</a>
             <a href="education">Education</a>
             <a href="skills">Skills</a>
             <a href="interest">Interests</a>

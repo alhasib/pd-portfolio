@@ -1,11 +1,14 @@
 .about-me{
-    margin-top: -347px; 
+    margin-top: -567px; 
     /* background-color: gainsboro; */
     margin-left: 466px;
     width: 909px;
     
 }
-
+.about {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 .fa {
     padding: 10px;
